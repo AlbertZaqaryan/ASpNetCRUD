@@ -1,0 +1,10 @@
+﻿<h1>News List</h1>
+<hr>
+@foreach(var i in Model)
+{
+	<h4>@i.Id : @i.Name</h4>
+	<p>@i.Description</p>
+	<form method="post" action="News/Delete">
+		<button type="submit" name="GetId" value="@i.Id">X</button>
+	</form>
+}
